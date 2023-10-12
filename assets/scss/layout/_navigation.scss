@@ -1,0 +1,29 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixin";
+
+.nav-items {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 100%;
+
+  .btn-cta {
+    @include mixin.btnDark(
+      variables.$btn-dark-text-color,
+      variables.$btn-dark-border,
+      variables.$btn-dark-font-family,
+      variables.$btn-dark-font-size,
+      variables.$btn-dark-line-height,
+      variables.$btn-dark-letter-spacing,
+      variables.$btn-dark-padding,
+      variables.$btn-dark-text-transform,
+      variables.$btn-dark-transition
+    );
+  }
+
+  .btn-cta:hover {
+    background-color: variables.$btn-dark-hover-bgColor;
+    color: variables.$btn-dark-hover-textColor;
+  }
+}

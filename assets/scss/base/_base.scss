@@ -12,38 +12,39 @@
   box-sizing: inherit;
 }
 
-a {
-  text-decoration: none;
-}
+body {
+  a {
+    text-decoration: none;
+    color: white;
+  }
 
-h1,
-.heading-primary {
-  @include mixin.headingPrimary(
-    variables.$heading-primary-color,
-    variables.$heading-primary-font-family,
-    variables.$heading-primary-font-size,
-    variables.$heading-primary-line-height,
-    variables.$heading-primary-letter-spacing
-  );
-}
+  .heading-primary {
+    @include mixin.headingPrimary(
+      variables.$heading-primary-color,
+      variables.$heading-primary-font-family,
+      variables.$heading-primary-font-size,
+      variables.$heading-primary-line-height,
+      variables.$heading-primary-letter-spacing
+    );
+  }
 
-h2 .heading-secondary {
-  @include mixin.headingSecondary(
-    variables.$heading-secondary-color,
-    variables.$heading-secondary-font-family,
-    variables.$heading-secondary-font-size,
-    variables.$heading-secondary-line-height,
-    variables.$heading-secondary-letter-spacing
-  );
-}
+  .heading-secondary {
+    @include mixin.headingSecondary(
+      variables.$heading-secondary-color,
+      variables.$heading-secondary-font-family,
+      variables.$heading-secondary-font-size,
+      variables.$heading-secondary-line-height,
+      variables.$heading-secondary-letter-spacing
+    );
+  }
 
-h3,
-.normal-text {
-  @include mixin.normalText(
-    variables.$text-color,
-    variables.$text-font-family,
-    variables.$text-font-size,
-    variables.$text-line-height,
-    variables.$text-letter-spacing
-  );
+  .normal-text {
+    @include mixin.normalText(
+      variables.$text-color,
+      variables.$text-font-family,
+      variables.$text-font-size,
+      variables.$text-line-height,
+      variables.$text-letter-spacing
+    );
+  }
 }

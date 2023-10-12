@@ -9,29 +9,25 @@
   box-sizing: inherit;
 }
 
-a {
+body a {
   text-decoration: none;
+  color: white;
 }
-
-h1,
-.heading-primary {
+body .heading-primary {
   color: #fff;
   font-family: "Inter-Bold";
   font-size: 6.125rem;
   letter-spacing: -2.475px;
   line-height: 112%;
 }
-
-h2 .heading-secondary {
+body .heading-secondary {
   color: #000;
   font-family: "Inter-Bold";
   font-size: 5.25rem;
   line-height: 98%;
   letter-spacing: -1.238px;
 }
-
-h3,
-.normal-text {
+body .normal-text {
   color: #000;
   font-family: "WorkSans-Regular";
   font-size: 1rem;
@@ -51,6 +47,7 @@ h3,
   max-width: 90rem;
   margin: 0 auto;
   padding-inline: 6.875rem;
+  width: 100%;
 }
 
 .grid {
@@ -78,8 +75,7 @@ h3,
   align-items: center;
   height: 100%;
 }
-
-.calling {
+.header .calling {
   height: 38.5625rem;
   color: white;
   display: flex;
@@ -87,27 +83,58 @@ h3,
   align-items: center;
   flex-grow: 1;
 }
-
-.vertical-divider {
+.header .vertical-divider {
   display: inline-block;
   height: 9.375rem;
   width: 1px;
   background-color: rgba(255, 255, 255, 0.3);
   margin-bottom: 2.625rem;
 }
-
-.header-sub-headline {
+.header .header-sub-headline {
   font-family: "WorkSans-Regular";
   font-size: 0.75rem;
   letter-spacing: -0.5px;
+  margin-bottom: 1rem;
 }
-
-.header-headline {
+.header .header-headline {
   font-family: "Inter-Bold";
+  font-size: 4rem;
+  line-height: 80%;
+  text-transform: uppercase;
+  text-align: center;
+}
+.header .header-headline span {
+  color: black;
+  text-shadow: -1px 0 0px white, 0 1px 0px white, 1px 0 0px white, 0 -1px 0px white;
+}
+.header .header-text {
+  font-family: "WorkSans-Regular";
+  font-size: 0.75rem;
+  letter-spacing: -0.5px;
+  margin-top: 1rem;
 }
 
-.header-text {
+.nav-items {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 100%;
+}
+.nav-items .btn-cta {
+  color: #fff;
+  border: 1px solid #aaa;
   font-family: "WorkSans-Regular";
+  font-size: 1.25rem;
+  line-height: 110%;
+  letter-spacing: -0.408px;
+  padding: 0.75rem 2rem;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+.nav-items .btn-cta:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 /*# sourceMappingURL=style.css.map */

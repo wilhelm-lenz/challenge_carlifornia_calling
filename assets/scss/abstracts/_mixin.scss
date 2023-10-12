@@ -43,13 +43,26 @@
 @mixin btnDark(
   $bdTextColor,
   $bdBorder,
+  $bdFontFamily,
   $bdFontSize,
   $bdLineHeight,
-  $bdLetterSpacing
+  $bdLetterSpacing,
+  $bdPadding,
+  $bdTextTransform,
+  $bdTransition
 ) {
-  color: $hsColor;
-  border: $hsFontFam;
-  font-size: $hsFontSize;
-  line-height: $hsLineH;
-  letter-spacing: $hsLetterSpacing;
+  color: $bdTextColor;
+  border: $bdBorder;
+  font-family: $bdFontFamily;
+  font-size: $bdFontSize;
+  line-height: $bdLineHeight;
+  letter-spacing: $bdLetterSpacing;
+  padding: $bdPadding;
+  text-transform: $bdTextTransform;
+  transition: $bdTransition;
+}
+
+@mixin btnDarkHover($bdhTextColor, $bdhBGColor) {
+  color: $bdTextColor;
+  background-color: $bdhBGColor;
 }

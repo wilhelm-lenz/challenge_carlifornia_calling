@@ -20,9 +20,16 @@ $text-letter-spacing: -0.408px;
 
 $btn-dark-text-color: #fff;
 $btn-dark-border: 1px solid #aaa;
-$btn-dark-font-size: "WorkSans-Regular";
+$btn-dark-font-family: "WorkSans-Regular";
+$btn-dark-font-size: 1.25rem;
 $btn-dark-line-height: 110%;
 $btn-dark-letter-spacing: -0.408px;
+$btn-dark-padding: 0.75rem 2rem;
+$btn-dark-text-transform: uppercase;
+$btn-dark-transition: all 0.5s;
+
+$btn-dark-hover-bgColor: #fff;
+$btn-dark-hover-textColor: #000;
 
 $bg-primary: #000;
 $bg-secondary: #fff;
