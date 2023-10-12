@@ -1,0 +1,55 @@
+@mixin headingPrimary(
+  $hpColor,
+  $hpFontFam,
+  $hpFontSize,
+  $hpLineH,
+  $hpLetterSpacing
+) {
+  color: $hpColor;
+  font-family: $hpFontFam;
+  font-size: $hpFontSize;
+  letter-spacing: $hpLetterSpacing;
+  line-height: $hpLineH;
+}
+
+@mixin headingSecondary(
+  $hsColor,
+  $hsFontFam,
+  $hsFontSize,
+  $hsLineH,
+  $hsLetterSpacing
+) {
+  color: $hsColor;
+  font-family: $hsFontFam;
+  font-size: $hsFontSize;
+  line-height: $hsLineH;
+  letter-spacing: $hsLetterSpacing;
+}
+
+@mixin normalText(
+  $txColor,
+  $txFontFam,
+  $txFontSize,
+  $txLineH,
+  $txLetterSpacing
+) {
+  color: $txColor;
+  font-family: $txFontFam;
+  font-size: $txFontSize;
+  line-height: $txLineH;
+  letter-spacing: $txLetterSpacing;
+}
+
+@mixin btnDark(
+  $bdTextColor,
+  $bdBorder,
+  $bdFontSize,
+  $bdLineHeight,
+  $bdLetterSpacing
+) {
+  color: $hsColor;
+  border: $hsFontFam;
+  font-size: $hsFontSize;
+  line-height: $hsLineH;
+  letter-spacing: $hsLetterSpacing;
+}

@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+.heading-primary {
+  color: #fff;
+  font-family: "Inter-Bold";
+  font-size: 6.125rem;
+  letter-spacing: -2.475px;
+  line-height: 112%;
+}
+
+h2 .heading-secondary {
+  color: #000;
+  font-family: "Inter-Bold";
+  font-size: 5.25rem;
+  line-height: 98%;
+  letter-spacing: -1.238px;
+}
+
+h3,
+.normal-text {
+  color: #000;
+  font-family: "WorkSans-Regular";
+  font-size: 1rem;
+  line-height: 188%;
+  letter-spacing: -0.408px;
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("/assets/fonts/Inter-Bold.ttf");
+}
+@font-face {
+  font-family: "WorkSans-Regular";
+  src: url("/assets/fonts/WorkSans-Regular.ttf");
+}
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding-inline: 6.875rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--12-cols {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.header {
+  height: 44.1875rem;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.calling {
+  height: 38.5625rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.vertical-divider {
+  display: inline-block;
+  height: 9.375rem;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 2.625rem;
+}
+
+.header-sub-headline {
+  font-family: "WorkSans-Regular";
+  font-size: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.header-headline {
+  font-family: "Inter-Bold";
+}
+
+.header-text {
+  font-family: "WorkSans-Regular";
+}
+
+/*# sourceMappingURL=style.css.map */
