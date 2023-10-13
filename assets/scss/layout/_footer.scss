@@ -1,0 +1,139 @@
+@use "../abstracts/variables";
+@use "../components/buttons";
+
+// ===============================
+// FOOTER
+// ===============================
+.footer {
+  background-color: variables.$bg-primary;
+  min-height: 38.75rem;
+  position: relative;
+  padding-bottom: 1.5rem;
+  overflow: hidden;
+
+  .footer-wrapper {
+    height: 100%;
+    position: relative;
+  }
+
+  .footer-subheadline {
+    color: white;
+    padding-block: 5.75rem 1.75rem;
+  }
+
+  .footer-headline {
+    color: white;
+    margin-bottom: 2.375rem;
+    font-family: "Inter-Bold";
+    font-size: 1.5rem;
+    line-height: 192%;
+    max-width: 31.25rem;
+  }
+
+  .btn-cta {
+    @include buttons.btnDark(
+      variables.$btn-dark-text-color,
+      variables.$btn-dark-border,
+      variables.$btn-dark-font-family,
+      variables.$btn-dark-font-size,
+      variables.$btn-dark-line-height,
+      variables.$btn-dark-letter-spacing,
+      variables.$btn-dark-padding,
+      variables.$btn-dark-text-transform,
+      variables.$btn-dark-transition
+    );
+  }
+
+  .btn-cta:hover {
+    background-color: variables.$btn-dark-hover-bgColor;
+    color: variables.$btn-dark-hover-textColor;
+  }
+
+  .social-media {
+    margin-block: 90px 10px;
+  }
+
+  .social-media img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .copyright {
+    color: white;
+    font-family: "WorkSans-Regular";
+  }
+
+  .copyright span {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .badges {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .badges img:nth-of-type(1) {
+    width: 50px;
+    height: 28px;
+  }
+
+  .badges img:nth-of-type(2) {
+    width: 50px;
+    height: 15px;
+  }
+
+  .text-animation-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .text-animation {
+    background-color: white;
+    font-size: 90px;
+    font-family: "Inter-Bold";
+    color: black;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 2500px;
+    left: -120px;
+    top: 250px;
+    bottom: 260px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .text-animation p {
+    transition: transform 1s linear;
+    animation: textflow 10s linear infinite;
+    text-transform: uppercase;
+    font-family: "Inter-Bold";
+    font-weight: 700px;
+  }
+
+  .text-animation p span {
+    color: white;
+    text-shadow: -2px 0 0 #555, 0 -1px 0 #555, 2px 0 0 #555, 0 1px 0 #555;
+  }
+
+  @keyframes textflow {
+    0% {
+      transform: translatex(0);
+    }
+    25% {
+      transform: translatex(400px);
+    }
+    75% {
+      transform: translatex(0px);
+    }
+    75% {
+      transform: translatex(-400px);
+    }
+    100% {
+      transform: translatex(0);
+    }
+  }
+}

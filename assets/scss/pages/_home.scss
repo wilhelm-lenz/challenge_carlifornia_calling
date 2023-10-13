@@ -8,7 +8,7 @@
 .section--story-wrap {
   background-color: variables.$bg-primary;
   position: relative;
-  height: 88.75rem;
+
   padding-block: 7.5rem 6.25rem;
 
   .story-wrap--headline {
@@ -36,7 +36,6 @@
 
   .story-wrap-img {
     width: 28rem;
-    height: 34rem;
     overflow: hidden;
     position: absolute;
     bottom: 100px;
@@ -49,7 +48,7 @@
 // ===============================
 
 .section-action > .container-full-width {
-  height: 116.625rem;
+  min-height: 116.625rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -134,13 +133,10 @@
 
 .section-golden-bear {
   background-color: variables.$bg-primary;
-  height: 75.75rem;
+  min-height: 75.75rem;
   padding-top: 10.5rem;
   position: relative;
   margin-bottom: 25.75rem;
-
-  .headline-wrapper {
-  }
 
   .headline-wrapper p {
     color: white;
@@ -154,12 +150,12 @@
   .golden-bear-quote-wrapper {
     align-self: center;
     max-width: 32.5rem;
-    margin-top: 0.75rem;
   }
 
   .golden-bear-text {
     color: white;
     font-size: 1.75rem;
+    margin-top: 2rem;
   }
 
   .author {
@@ -211,13 +207,73 @@
     height: 500px;
     animation: rotating 10s linear infinite;
   }
+
+  @keyframes rotating {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
 
-@keyframes rotating {
-  0% {
-    transform: rotate(0deg);
+// ===============================
+// SECTION POPPY BEAR
+// ===============================
+
+.section-poppy-bear {
+  background-color: variables.$bg-neutral-color;
+  min-height: 64.1875rem;
+  padding-top: 1.25rem;
+  position: relative;
+
+  .headline-wrapper p {
+    color: black;
+    margin-bottom: 0.75rem;
   }
-  100% {
-    transform: rotate(360deg);
+
+  .poppy-bear-headline {
+    color: black;
+  }
+
+  .poppy-bear-quote-wrapper {
+    align-self: center;
+    max-width: 32.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .poppy-bear-text {
+    color: black;
+    font-size: 1.75rem;
+    margin-top: 2rem;
+  }
+
+  .author {
+    display: inline-block;
+    color: black;
+    margin-top: 1.25rem;
+  }
+
+  .poppy-bear-img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .poppy-bear-img:nth-of-type(1) {
+    max-width: 366px;
+    max-height: 473px;
+    position: absolute;
+    left: 172px;
+    bottom: -76px;
+    z-index: 1;
+  }
+
+  .poppy-bear-img:nth-of-type(2) {
+    max-width: 731px;
+    max-height: 731px;
+    position: absolute;
+    left: 475px;
+    bottom: -167px;
   }
 }
