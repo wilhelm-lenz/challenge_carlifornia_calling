@@ -1,4 +1,5 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixin";
 @use "../components/buttons";
 
 // ===============================
@@ -28,6 +29,15 @@
     font-size: 1.5rem;
     line-height: 192%;
     max-width: 31.25rem;
+    @include mixin.respond(tab-landscape) {
+      font-size: 24px;
+    }
+    @include mixin.respond(tab-port) {
+      font-size: 20px;
+    }
+    @include mixin.respond(phone) {
+      font-size: 18px;
+    }
   }
 
   .btn-cta {
@@ -51,9 +61,15 @@
 
   .social-media {
     margin-block: 90px 10px;
+    display: flex;
+    column-gap: 10px;
   }
 
-  .social-media img {
+  .social-media a:hover {
+    opacity: 0.5;
+  }
+
+  .social-media a img {
     width: 1rem;
     height: 1rem;
   }

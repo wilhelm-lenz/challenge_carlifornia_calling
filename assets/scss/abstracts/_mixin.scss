@@ -61,3 +61,42 @@
   line-height: $qtLineH;
   letter-spacing: $qtLetterSpacing;
 }
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:        Phone
+600 - 900px:      Tablet portrait
+900 - 1200px:     Tablet landscape
+(1200 - 1800px)   Desktop / Laptop
+1801px + :        Big desktop
+*/
+
+/*
+$breakpoint argument choices
+- phone
+- tab-port
+- tab-landscape
+- big-desktop
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media screen and (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media screen and (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-landscape {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media screen and (min-width: 1800px) {
+      @content;
+    }
+  }
+}

@@ -13,58 +13,86 @@
 }
 
 body {
-  a {
-    text-decoration: none;
-    color: white;
-  }
+}
+a {
+  text-decoration: none;
+  color: white;
+}
 
-  .heading-primary {
-    @include mixin.headingPrimary(
-      variables.$heading-primary-color,
-      variables.$heading-primary-font-family,
-      variables.$heading-primary-font-size,
-      variables.$heading-primary-line-height,
-      variables.$heading-primary-letter-spacing
-    );
-  }
+.heading-primary {
+  @include mixin.headingPrimary(
+    variables.$heading-primary-color,
+    variables.$heading-primary-font-family,
+    variables.$heading-primary-font-size,
+    variables.$heading-primary-line-height,
+    variables.$heading-primary-letter-spacing
+  );
 
-  .heading-secondary {
-    @include mixin.headingSecondary(
-      variables.$heading-secondary-color,
-      variables.$heading-secondary-font-family,
-      variables.$heading-secondary-font-size,
-      variables.$heading-secondary-line-height,
-      variables.$heading-secondary-letter-spacing
-    );
+  @include mixin.respond(tab-landscape) {
+    font-size: 4.625rem;
   }
-
-  .subheading {
-    @include mixin.subheading(
-      variables.$subheading-color,
-      variables.$subheading-font-family,
-      variables.$subheading-font-size,
-      variables.$subheading-line-height,
-      variables.$subheading-letter-spacing
-    );
+  @include mixin.respond(tab-port) {
+    font-size: 3.25rem;
   }
-
-  .normal-text {
-    @include mixin.normalText(
-      variables.$text-color,
-      variables.$text-font-family,
-      variables.$text-font-size,
-      variables.$text-line-height,
-      variables.$text-letter-spacing
-    );
+  @include mixin.respond(phone) {
+    font-size: 2.25rem;
   }
+}
 
-  .quote {
-    @include mixin.quote(
-      variables.$quote-color,
-      variables.$quote-font-family,
-      variables.$quote-font-size,
-      variables.$quote-line-height,
-      variables.$quote-letter-spacing
-    );
+.heading-secondary {
+  @include mixin.headingSecondary(
+    variables.$heading-secondary-color,
+    variables.$heading-secondary-font-family,
+    variables.$heading-secondary-font-size,
+    variables.$heading-secondary-line-height,
+    variables.$heading-secondary-letter-spacing
+  );
+  @include mixin.respond(tab-landscape) {
+    font-size: 3.875rem;
+  }
+  @include mixin.respond(tab-port) {
+    font-size: 3.25rem;
+  }
+  @include mixin.respond(phone) {
+    font-size: 2.25rem;
+  }
+}
+
+.subheading {
+  @include mixin.subheading(
+    variables.$subheading-color,
+    variables.$subheading-font-family,
+    variables.$subheading-font-size,
+    variables.$subheading-line-height,
+    variables.$subheading-letter-spacing
+  );
+}
+
+.normal-text {
+  @include mixin.normalText(
+    variables.$text-color,
+    variables.$text-font-family,
+    variables.$text-font-size,
+    variables.$text-line-height,
+    variables.$text-letter-spacing
+  );
+}
+
+.quote {
+  @include mixin.quote(
+    variables.$quote-color,
+    variables.$quote-font-family,
+    variables.$quote-font-size,
+    variables.$quote-line-height,
+    variables.$quote-letter-spacing
+  );
+  @include mixin.respond(tab-landscape) {
+    font-size: 1.5rem;
+  }
+  @include mixin.respond(tab-port) {
+    font-size: 1.25rem;
+  }
+  @include mixin.respond(phone) {
+    font-size: 1.125rem;
   }
 }
