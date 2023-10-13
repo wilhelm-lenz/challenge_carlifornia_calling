@@ -222,10 +222,22 @@
 
 .section-golden-bear {
   background-color: variables.$bg-primary;
-  min-height: 75.75rem;
+  // min-height: 75.75rem;
   padding-top: 10.5rem;
+  padding-bottom: 50rem;
   position: relative;
   margin-bottom: 25.75rem;
+
+  @include mixin.respond(tab-landscape) {
+    padding-bottom: 35rem;
+  }
+  @include mixin.respond(tab-port) {
+    padding-bottom: 20rem;
+  }
+  @include mixin.respond(phone) {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
 
   .headline-wrapper p {
     color: white;
@@ -276,6 +288,15 @@
     position: absolute;
     left: 109px;
     bottom: -167px;
+    @include mixin.respond(tab-landscape) {
+      max-width: 500px;
+      max-height: 500px;
+    }
+    @include mixin.respond(tab-port) {
+      max-width: 300px;
+      max-height: 300px;
+      bottom: -107px;
+    }
   }
 
   .golden-bear-img:nth-of-type(2) {
@@ -284,6 +305,16 @@
     position: absolute;
     left: 778px;
     bottom: -75px;
+    @include mixin.respond(tab-landscape) {
+      max-width: 250px;
+      max-height: 323px;
+      left: 550px;
+    }
+    @include mixin.respond(tab-port) {
+      max-width: 160px;
+      max-height: 240px;
+      left: 380px;
+    }
   }
 
   .circle-animation-wrapper {
@@ -294,6 +325,9 @@
     width: 390px; /* Die Hälfte der ursprünglichen Breite */
     height: 500px; /* Die ursprüngliche Höhe */
     z-index: -1;
+    @include mixin.respond(phone) {
+      width: 280px;
+    }
   }
 
   .circle-animation {
@@ -301,12 +335,20 @@
     left: 0px; /* Keine Verschiebung notwendig, um die linke Hälfte sichtbar zu machen */
     width: 500px;
     height: 500px;
+    @include mixin.respond(phone) {
+      width: 400px;
+      height: 400px;
+    }
   }
 
   .circle-animation img {
     width: 500px;
     height: 500px;
     animation: rotating 10s linear infinite;
+    @include mixin.respond(phone) {
+      width: 400px;
+      height: 400px;
+    }
   }
 
   @keyframes rotating {
@@ -325,9 +367,21 @@
 
 .section-poppy-bear {
   background-color: variables.$bg-neutral-color;
-  min-height: 64.1875rem;
+  // min-height: 64.1875rem;
+  padding-bottom: 50rem;
   padding-top: 1.25rem;
   position: relative;
+
+  @include mixin.respond(tab-landscape) {
+    padding-bottom: 35rem;
+  }
+  @include mixin.respond(tab-port) {
+    padding-bottom: 20rem;
+  }
+  @include mixin.respond(phone) {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
 
   .headline-wrapper p {
     color: black;
@@ -380,6 +434,16 @@
     left: 172px;
     bottom: -76px;
     z-index: 1;
+    @include mixin.respond(tab-landscape) {
+      max-width: 250px;
+      max-height: 323px;
+      left: 100px;
+    }
+    @include mixin.respond(tab-port) {
+      max-width: 120px;
+      max-height: 200px;
+      left: 30px;
+    }
   }
 
   .poppy-bear-img:nth-of-type(2) {
@@ -388,5 +452,14 @@
     position: absolute;
     left: 475px;
     bottom: -167px;
+    @include mixin.respond(tab-landscape) {
+      max-width: 500px;
+      max-height: 500px;
+      left: 275px;
+    }
+    @include mixin.respond(tab-port) {
+      max-width: 300px;
+      max-height: 300px;
+    }
   }
 }

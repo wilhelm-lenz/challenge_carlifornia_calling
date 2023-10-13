@@ -1,9 +1,14 @@
+@use "../abstracts/mixin";
+
 .grid {
   display: grid;
 }
 
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
+  @include mixin.respond(phone) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .grid--3-cols {

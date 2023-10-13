@@ -6,6 +6,12 @@
   margin: 0 auto;
   padding-inline: 6.875rem;
   width: 100%;
+  @include mixin.respond(phone) {
+    padding-inline: 5%;
+  }
+  @include mixin.respond(phone) {
+    padding-inline: 5%;
+  }
 }
 
 .container-full-width {
