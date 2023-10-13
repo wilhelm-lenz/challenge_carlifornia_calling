@@ -1,0 +1,223 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixin";
+
+// ===============================
+// SECTION INFORMATION
+// ===============================
+
+.section--story-wrap {
+  background-color: variables.$bg-primary;
+  position: relative;
+  height: 88.75rem;
+  padding-block: 7.5rem 6.25rem;
+
+  .story-wrap--headline {
+    max-width: 67.5rem;
+    margin-bottom: 6.25rem;
+  }
+
+  .story-wrap--item {
+    color: white;
+  }
+
+  .item-headline {
+    margin-bottom: 0.375rem;
+    font-family: variables.$text-font-family;
+    font-size: 0.875rem;
+  }
+
+  .item-info-text {
+    font-family: variables.$heading-primary-font-family;
+    font-size: 5.375rem;
+    line-height: 126%;
+    letter-spacing: -0.1547rem;
+    margin-bottom: 1.125rem;
+  }
+
+  .story-wrap-img {
+    width: 28rem;
+    height: 34rem;
+    overflow: hidden;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+  }
+}
+
+// ===============================
+// SECTION ACTION
+// ===============================
+
+.section-action > .container-full-width {
+  height: 116.625rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .action--content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 28.125rem;
+    margin-top: 25.625rem;
+  }
+
+  .content-headline {
+    margin-bottom: 1.5rem;
+  }
+
+  .content-text:nth-of-type(2) {
+    margin-top: 42.5rem;
+  }
+
+  .content-img {
+    width: 100%;
+    max-width: 27.5rem;
+    max-height: 18.75rem;
+    position: absolute;
+  }
+
+  .content-img:nth-of-type(1),
+  .content-img:nth-of-type(4),
+  .content-img:nth-of-type(5) {
+    max-width: 20.625rem;
+  }
+
+  .content-img:nth-of-type(2),
+  .content-img:nth-of-type(3),
+  .content-img:nth-of-type(6) {
+    max-width: 17.5rem;
+  }
+
+  .content-img:nth-of-type(1) {
+    top: -80px;
+    right: 110px;
+  }
+
+  .content-img:nth-of-type(2) {
+    top: 280px;
+    left: 54px;
+  }
+
+  .content-img:nth-of-type(3) {
+    top: 665px;
+    right: 0px;
+  }
+
+  .content-img:nth-of-type(4) {
+    bottom: 770px;
+    left: 220px;
+  }
+
+  .content-img:nth-of-type(5) {
+    bottom: 583px;
+    right: 164px;
+  }
+
+  .content-img:nth-of-type(6) {
+    bottom: 320px;
+    left: 0px;
+  }
+
+  .content-img:nth-of-type(7) {
+    bottom: -70px;
+    right: 274px;
+    z-index: -1;
+  }
+}
+
+// ===============================
+// SECTION GOLDEN BEAR
+// ===============================
+
+.section-golden-bear {
+  background-color: variables.$bg-primary;
+  height: 75.75rem;
+  padding-top: 10.5rem;
+  position: relative;
+  margin-bottom: 25.75rem;
+
+  .headline-wrapper {
+  }
+
+  .headline-wrapper p {
+    color: white;
+    margin-bottom: 0.75rem;
+  }
+
+  .golden-bear-headline {
+    color: white;
+  }
+
+  .golden-bear-quote-wrapper {
+    align-self: center;
+    max-width: 32.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .golden-bear-text {
+    color: white;
+    font-size: 1.75rem;
+  }
+
+  .author {
+    display: inline-block;
+    color: white;
+    margin-top: 1.25rem;
+  }
+
+  .golden-bear-img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .golden-bear-img:nth-of-type(1) {
+    max-width: 731px;
+    max-height: 731px;
+    position: absolute;
+    left: 109px;
+    bottom: -167px;
+  }
+
+  .golden-bear-img:nth-of-type(2) {
+    max-width: 366px;
+    max-height: 473px;
+    position: absolute;
+    left: 778px;
+    bottom: -75px;
+  }
+
+  .circle-animation-wrapper {
+    position: absolute;
+    right: 0px;
+    bottom: -318px;
+    overflow: hidden;
+    width: 390px; /* Die Hälfte der ursprünglichen Breite */
+    height: 500px; /* Die ursprüngliche Höhe */
+    z-index: -1;
+  }
+
+  .circle-animation {
+    position: absolute;
+    left: 0px; /* Keine Verschiebung notwendig, um die linke Hälfte sichtbar zu machen */
+    width: 500px;
+    height: 500px;
+  }
+
+  .circle-animation img {
+    width: 500px;
+    height: 500px;
+    animation: rotating 10s linear infinite;
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

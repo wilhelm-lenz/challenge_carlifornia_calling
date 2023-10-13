@@ -38,6 +38,16 @@ body {
     );
   }
 
+  .subheading {
+    @include mixin.subheading(
+      variables.$subheading-color,
+      variables.$subheading-font-family,
+      variables.$subheading-font-size,
+      variables.$subheading-line-height,
+      variables.$subheading-letter-spacing
+    );
+  }
+
   .normal-text {
     @include mixin.normalText(
       variables.$text-color,
@@ -45,6 +55,16 @@ body {
       variables.$text-font-size,
       variables.$text-line-height,
       variables.$text-letter-spacing
+    );
+  }
+
+  .quote {
+    @include mixin.quote(
+      variables.$quote-color,
+      variables.$quote-font-family,
+      variables.$quote-font-size,
+      variables.$quote-line-height,
+      variables.$quote-letter-spacing
     );
   }
 }

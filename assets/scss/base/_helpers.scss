@@ -6,3 +6,9 @@
   padding-inline: 6.875rem;
   width: 100%;
 }
+
+.container-full-width {
+  max-width: variables.$container-max-width;
+  margin: 0 auto;
+  width: 100%;
+}

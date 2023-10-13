@@ -26,6 +26,20 @@
   letter-spacing: $hsLetterSpacing;
 }
 
+@mixin subheading(
+  $shColor,
+  $shFontFam,
+  $shFontSize,
+  $shLineH,
+  $shLetterSpacing
+) {
+  color: $shColor;
+  font-family: $shFontFam;
+  font-size: $shFontSize;
+  line-height: $shLineH;
+  letter-spacing: $shLetterSpacing;
+}
+
 @mixin normalText(
   $txColor,
   $txFontFam,
@@ -40,29 +54,10 @@
   letter-spacing: $txLetterSpacing;
 }
 
-@mixin btnDark(
-  $bdTextColor,
-  $bdBorder,
-  $bdFontFamily,
-  $bdFontSize,
-  $bdLineHeight,
-  $bdLetterSpacing,
-  $bdPadding,
-  $bdTextTransform,
-  $bdTransition
-) {
-  color: $bdTextColor;
-  border: $bdBorder;
-  font-family: $bdFontFamily;
-  font-size: $bdFontSize;
-  line-height: $bdLineHeight;
-  letter-spacing: $bdLetterSpacing;
-  padding: $bdPadding;
-  text-transform: $bdTextTransform;
-  transition: $bdTransition;
-}
-
-@mixin btnDarkHover($bdhTextColor, $bdhBGColor) {
-  color: $bdTextColor;
-  background-color: $bdhBGColor;
+@mixin quote($qtColor, $qtFontFam, $qtFontSize, $qtLineH, $qtLetterSpacing) {
+  color: $qtColor;
+  font-family: $qtFontFam;
+  font-size: $qtFontSize;
+  line-height: $qtLineH;
+  letter-spacing: $qtLetterSpacing;
 }
