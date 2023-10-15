@@ -79,6 +79,11 @@ $breakpoint argument choices
 - big-desktop
 */
 @mixin respond($breakpoint) {
+  @if $breakpoint == xs-phone {
+    @media screen and (max-width: 361px) {
+      @content;
+    }
+  }
   @if $breakpoint == sm-phone {
     @media screen and (max-width: 440px) {
       @content;

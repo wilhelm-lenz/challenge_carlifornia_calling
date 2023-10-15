@@ -300,6 +300,14 @@ a {
     bottom: 140px;
   }
 }
+@media screen and (max-width: 361px) {
+  .footer .text-animation {
+    font-size: 48px;
+    left: -370px;
+    top: 420px;
+    bottom: 130px;
+  }
+}
 .footer .text-animation p {
   transition: transform 1s linear;
   animation: textflow 7s linear infinite;
@@ -399,6 +407,7 @@ a {
   font-size: 0.75rem;
   letter-spacing: -0.5px;
   margin-top: 1rem;
+  text-align: center;
 }
 
 .nav-items {

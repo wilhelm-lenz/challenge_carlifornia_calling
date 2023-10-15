@@ -149,6 +149,12 @@
       top: 390px;
       bottom: 140px;
     }
+    @include mixin.respond(xs-phone) {
+      font-size: 48px;
+      left: -370px;
+      top: 420px;
+      bottom: 130px;
+    }
   }
 
   .text-animation p {
