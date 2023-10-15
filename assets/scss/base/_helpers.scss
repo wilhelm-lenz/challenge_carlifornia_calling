@@ -6,8 +6,8 @@
   margin: 0 auto;
   padding-inline: 6.875rem;
   width: 100%;
-  @include mixin.respond(phone) {
-    padding-inline: 5%;
+  @include mixin.respond(tab-port) {
+    padding-inline: 10%;
   }
   @include mixin.respond(phone) {
     padding-inline: 5%;
@@ -26,4 +26,7 @@
 .bottom-spacing {
   height: 12.5rem;
   background-color: variables.$bg-neutral-color;
+  @include mixin.respond(phone) {
+    display: none;
+  }
 }
